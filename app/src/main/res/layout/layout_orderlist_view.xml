@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+        <TextView
+            android:id="@+id/tv_list1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:text="Order 1"
+            android:textSize="40dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_list2"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_below="@+id/tv_list1"
+            android:layout_marginTop="5dp"
+            android:text="Menu: "
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_list3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/tv_list1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="Price $:"
+            android:textColor="#ff0000"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_list4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/tv_list2"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="10dp"
+            android:text="Unpaid"
+            android:textColor="#ff0000"
+            android:background="#ffaa00"
+            android:padding="10dp"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</LinearLayout>

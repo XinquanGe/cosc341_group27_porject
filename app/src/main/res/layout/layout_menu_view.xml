@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_list"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:background="@color/black"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+
+        android:paddingLeft="15dp">
+        <TextView
+            android:id="@+id/tv_dishName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textStyle="bold"
+            android:text="Name"
+            android:textSize="30dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tv_describe"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_dishName"
+
+            android:text="describe"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_dishName"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
+            android:text="price: "
+            android:textSize="20dp"
+            android:textColor="#ff0000"/>
+
+        <Button
+            android:id="@+id/bt_menu1"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@+id/tv_describe"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="5dp"
+            android:text="-"/>
+        <TextView
+            android:id="@+id/tv_dishNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/bt_menu1"
+            android:textStyle="bold"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="10dp"
+            android:text="0"
+            android:textSize="30dp"/>
+        <Button
+            android:id="@+id/bt_menu2"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@+id/tv_dishNum"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="10dp"
+            android:text="+"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
