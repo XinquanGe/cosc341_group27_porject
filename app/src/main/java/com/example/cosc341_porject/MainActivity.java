@@ -18,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView lv;
     private Button bt1, bt2, bt3, bt4;
     private EditText et1;
+    private ImageButton ib1;
     private String s=null;
     private boolean isLogIn = false;
     LocalData localData = null;
@@ -207,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
         bt2=findViewById(R.id.home);
         bt3=findViewById(R.id.orderlist);
         bt4=findViewById(R.id.bt_startlogin);
+        ib1=findViewById(R.id.ib);
         et1=findViewById(R.id.et_1);
 
 
@@ -317,6 +320,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,LoginActivity.class);
                 register.launch(intent);
+            }
+        });
+
+        ib1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isLogIn==false){
+                    Toast.makeText(MainActivity.this, "Please Log In", Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent intent = new Intent(MainActivity.this,InformationActivity.class);
+                    intent.putExtra("Restaurant",localData.getRestaurants().get(0));
+                    startActivity(intent);
+                }
             }
         });
 
