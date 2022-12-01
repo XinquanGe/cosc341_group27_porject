@@ -111,9 +111,16 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        Button homeBtn = findViewById(R.id.homeBtn);
 
-
-
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                finish();
+            }
+        });
+        
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
