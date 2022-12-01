@@ -120,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-        
+
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
