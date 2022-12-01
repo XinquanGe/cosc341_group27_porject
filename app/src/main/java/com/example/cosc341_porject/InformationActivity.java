@@ -102,12 +102,10 @@ public class InformationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(InformationActivity.this, MapsActivity.class);
+                intent.putExtra("address",restaurant.getAddress());
+                intent.putExtra("name",restaurant.getName());
                 startActivity(intent);
             }
         });
-
-
-
-
     }
 }
