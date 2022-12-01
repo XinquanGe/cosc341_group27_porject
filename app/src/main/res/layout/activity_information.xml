@@ -5,6 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InformationActivity">
+
+    <EditText
+        android:id="@+id/txt"
+        android:layout_width="355dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_et1"
+        android:hint="Write a comment..."
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <TextView
+        android:id="@+id/tv_restaurantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant Name"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.143" />
+
     <TextView
         android:id="@+id/tv_in_1"
         android:layout_width="wrap_content"
@@ -16,21 +47,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.037" />
-
-    <TextView
-        android:id="@+id/tv_restaurantName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Restaurant Name"
-        android:textSize="40dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.143" />
 
     <TextView
         android:id="@+id/tv_restaurantTime"
@@ -80,15 +96,68 @@
 
     <ImageView
         android:id="@+id/mapBtn"
-        android:layout_width="373dp"
-        android:layout_height="218dp"
+        android:layout_width="58dp"
+        android:layout_height="54dp"
         android:src="@drawable/map"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.69" />
+        app:layout_constraintVertical_bias="0.141" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="354dp"
+        android:layout_height="223dp"
+        android:layout_marginTop="40dp"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_PhoneNumber">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_gravity="top"
+            android:divider="@color/black"
+            android:gravity="top"
+            android:isScrollContainer="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="355dp"
+                android:layout_height="37dp"
+                android:background="#2503A9F4"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="355dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="44dp"
+                android:background="#2503A9F4"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="355dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="44dp"
+                android:background="#2503A9F4"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="355dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="44dp"
+                android:background="#2503A9F4" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <RelativeLayout
         android:id="@+id/bottom"
@@ -116,12 +185,13 @@
 
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginEnd="40dp"
             android:layout_alignParentRight="true"
+            android:layout_marginEnd="40dp"
             android:background="#66ddff"
+            android:padding="5dp"
             android:text="ORDER NOW!"
-            android:textSize="20dp"
-            android:padding="5dp"/>
+            android:textSize="20dp" />
 
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
