@@ -140,7 +140,7 @@ public class InformationActivity extends AppCompatActivity {
             {
                 if (id == EditorInfo.IME_NULL)
                 {
-                    String str = "Tom\n\t" + "good" ;//txt.getText().toString();
+                    String str = "Tom\n\t" + txt.getText().toString();
 
                     text4.setText(str);
 
