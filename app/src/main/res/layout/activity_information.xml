@@ -80,15 +80,15 @@
 
     <ImageView
         android:id="@+id/iv_restaurant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="373dp"
+        android:layout_height="218dp"
         android:src="@drawable/map"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.638" />
+        app:layout_constraintVertical_bias="0.69" />
 
     <RelativeLayout
         android:id="@+id/bottom"
@@ -101,6 +101,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1">
+
+        <Button
+            android:id="@+id/home3"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:background="#66ddff"
+            android:text="HOME"
+            android:textSize="20dp" />
+
         <Button
             android:id="@+id/bt_in_order"
 

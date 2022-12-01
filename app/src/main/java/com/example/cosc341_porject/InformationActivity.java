@@ -85,5 +85,16 @@ public class InformationActivity extends AppCompatActivity {
             }
         });
 
+        Button homeBtn = findViewById(R.id.home3);
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(InformationActivity.this,MainActivity.class);
+                finish();
+            }
+        });
+
+
     }
 }
