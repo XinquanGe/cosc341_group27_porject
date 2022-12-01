@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 public class MenuPage extends AppCompatActivity {
     private ListView lvMenu;
-    private TextView tv1,tv_menu1;
+    private TextView tv1,tv_menu1, tv_menu2;
     private Button bt1;
     private order or=new order();
     double totalNumber = 0;
@@ -82,7 +82,8 @@ public class MenuPage extends AppCompatActivity {
         Intent intent = getIntent();
         Restaurant restaurant = (Restaurant) intent.getSerializableExtra("Restaurant");
 
-        Log.d("as", " "+restaurant.getName()+" r"+restaurant.getMenu().get(0).getName());
+        tv_menu2=findViewById(R.id.tv_menu_2);
+        tv_menu2.setText(restaurant.getName());
 
         tv1=findViewById(R.id.tv_totalprice);
         lvMenu=findViewById(R.id.lv_menu);
@@ -157,6 +158,7 @@ public class MenuPage extends AppCompatActivity {
                     }
 
                 Intent intent1 = new Intent(MenuPage.this,MainActivity.class);
+                    Toast.makeText(MenuPage.this, "Order is successful. Check on order page", Toast.LENGTH_SHORT).show();
                 startActivity(intent1);
                 }
             }
