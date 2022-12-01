@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.FileInputStream;
@@ -85,5 +86,26 @@ public class InformationActivity extends AppCompatActivity {
             }
         });
 
+        Button homeBtn = findViewById(R.id.home3);
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(InformationActivity.this,MainActivity.class);
+                finish();
+            }
+        });
+
+        ImageView mapBtn = findViewById(R.id.mapBtn);
+
+        mapBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(InformationActivity.this, MapsActivity.class);
+                intent.putExtra("address",restaurant.getAddress());
+                intent.putExtra("name",restaurant.getName());
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -85,6 +85,14 @@ public class MenuPage extends AppCompatActivity {
         tv_menu2=findViewById(R.id.tv_menu_2);
         tv_menu2.setText(restaurant.getName());
 
+        tv_menu2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuPage.this,MainActivity.class);
+                finish();
+            }
+        });
+
         tv1=findViewById(R.id.tv_totalprice);
         lvMenu=findViewById(R.id.lv_menu);
         listViewAdapterMenu menuAdapter = new listViewAdapterMenu(MenuPage.this,restaurant.getMenu());
