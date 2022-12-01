@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.io.FileInputStream;
@@ -37,6 +38,16 @@ public class SearchActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(SearchActivity.this,InformationActivity.class);
                 intent.putExtra("Restaurant",restaurants.get(i));
+                startActivity(intent);
+            }
+        });
+
+        Button home = findViewById(R.id.home2);
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchActivity.this,MainActivity.class);
                 startActivity(intent);
             }
         });

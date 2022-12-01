@@ -5,17 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SearchActivity">
-    <TextView
-        android:id="@+id/tv_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello XXX!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
 
 
     <ListView
@@ -23,13 +12,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toTopOf="@id/bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_1"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RelativeLayout
         android:id="@+id/bottom"
@@ -43,5 +29,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1">
 
+        <Button
+            android:id="@+id/home2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:background="#66ddff"
+            android:text="HOME"
+            android:textSize="20dp" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
