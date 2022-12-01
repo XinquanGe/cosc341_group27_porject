@@ -36,6 +36,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.143" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="96dp"
+        android:layout_height="155dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_restaurantTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/stars" />
+
     <TextView
         android:id="@+id/tv_in_1"
         android:layout_width="wrap_content"
@@ -101,8 +112,7 @@
         android:src="@drawable/map"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_restaurantName"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.141" />
 
@@ -119,7 +129,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="148dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:divider="@color/black"
             android:gravity="top"
