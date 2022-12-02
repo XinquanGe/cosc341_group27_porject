@@ -199,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                 Intent intent = new Intent(MainActivity.this,InformationActivity.class);
                 intent.putExtra("Restaurant",localData.getRestaurants().get(i));
+                et1.setText("");
                 startActivity(intent);
                 }
             }
@@ -247,6 +248,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         Intent intent = new Intent(MainActivity.this, SearchActivity.class);
                         intent.putExtra("Restaurants", restaurants1);
+                        et1.setText("");
                         startActivity(intent);
                     }
                 }
@@ -331,6 +333,7 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Intent intent = new Intent(MainActivity.this,InformationActivity.class);
                     intent.putExtra("Restaurant",localData.getRestaurants().get(0));
+                    et1.setText("");
                     startActivity(intent);
                 }
             }
