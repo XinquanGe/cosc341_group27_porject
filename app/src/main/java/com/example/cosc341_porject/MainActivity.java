@@ -212,12 +212,12 @@ public class MainActivity extends AppCompatActivity {
         bt4=findViewById(R.id.bt_startlogin);
         ib1=findViewById(R.id.ib);
         et1=findViewById(R.id.et_1);
+        et1.setText("");
 
 
         et1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
 
             @Override

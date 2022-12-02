@@ -1,13 +1,25 @@
 package com.example.cosc341_porject;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -18,6 +30,7 @@ public class InformationActivity extends AppCompatActivity {
     private TextView tv1, tv2, tv3, tv_in1;
     private Button bt1;
     LocalData localData = null;
+    String input = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,6 +118,37 @@ public class InformationActivity extends AppCompatActivity {
                 intent.putExtra("address",restaurant.getAddress());
                 intent.putExtra("name",restaurant.getName());
                 startActivity(intent);
+            }
+        });
+
+        TextView text1 = findViewById(R.id.textView18);
+        TextView text2 = findViewById(R.id.textView19);
+        TextView text3 = findViewById(R.id.textView20);
+        TextView text4 = findViewById(R.id.textView21);
+
+        EditText txt = (EditText) findViewById(R.id.txt);
+
+        text1.setText("John\n\tLovely food!");
+        text2.setText("David\n\tGreat Place!");
+        text3.setText("Robert\n\t10/10!");
+
+
+        txt.setOnEditorActionListener(new TextView.OnEditorActionListener()
+        {
+            @Override
+            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent)
+            {
+                if (id == EditorInfo.IME_NULL)
+                {
+                    String str = "Tom\n\t" + txt.getText().toString();
+
+                    text4.setText(str);
+
+                    txt.setText("Write a comment...");
+
+                    return true;
+                }
+                return false;
             }
         });
     }

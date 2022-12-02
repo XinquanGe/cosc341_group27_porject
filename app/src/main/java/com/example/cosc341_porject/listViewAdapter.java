@@ -48,6 +48,8 @@ public class listViewAdapter  extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
+
+
         viewHolder holder = null;
         if(view==null){
             view=layoutInflater.inflate(R.layout.layout_list_view,null);
@@ -60,8 +62,14 @@ public class listViewAdapter  extends BaseAdapter {
             holder = (viewHolder) view.getTag();
         }
 
-            holder.textView1.setText(restaurants.get(i).getName());
-            holder.imageView.setImageResource(R.drawable.testpic);
+        ArrayList<Integer> imgs = new ArrayList<Integer>();
+        imgs.add(R.drawable.img1);
+        imgs.add(R.drawable.img2);
+        imgs.add(R.drawable.img3);
+        imgs.add(R.drawable.img4);
+
+        holder.textView1.setText(restaurants.get(i).getName());
+        holder.imageView.setImageResource(imgs.get(i));
 
         return view;
     }
